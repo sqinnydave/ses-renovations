@@ -1,0 +1,136 @@
+@import '@radix-ui/themes/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button[type="button"]{
+  background-color: none;
+}
+
+iframe {width:100%; height:100%; min-height: 250px;}
+iframe.map {width:100%; height:100%; min-height: 350px;}
+
+.video-container {
+  @apply relative w-full h-[250px] md:h-[350px] lg:h-[500px] overflow-hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.video-container .caption {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  bottom: 0;
+  text-shadow: 0 0 7px rgba(0,0,0,0.6);
+}
+
+.quote-container {
+  input, select, textarea {
+    @apply block p-3 ring-1 rounded-lg w-full;
+  }
+  select {
+    @apply pr-4 bg-white;
+  }
+  label {
+    @apply block pb-2
+  }
+}
+
+[hidden]{
+  display: none;
+}
+
+.main {
+  @apply w-full h-full bg-white text-black;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: auto;
+}
+
+nav ul li a[data-active]{
+  @apply md:bg-slate-100;
+}
+
+.radix-themes {
+
+  :root, .light, .light-theme {
+    --blue-1: #fafdff;
+    --blue-2: #f2faff;
+    --blue-3: #e3f5ff;
+    --blue-4: #cff0ff;
+    --blue-5: #b9e7ff;
+    --blue-6: #a0dbfc;
+    --blue-7: #7dccf5;
+    --blue-8: #3ab6ee;
+    --blue-9: #2dade4;
+    --blue-10: #17a1d8;
+    --blue-11: #007cb0;
+    --blue-12: #003b5a;
+  
+    --blue-a1: #0099ff05;
+    --blue-a2: #009dff0d;
+    --blue-a3: #00a4ff1c;
+    --blue-a4: #00b0ff30;
+    --blue-a5: #00a8ff46;
+    --blue-a6: #009ff75f;
+    --blue-a7: #009bec82;
+    --blue-a8: #00a1e9c5;
+    --blue-a9: #009cded2;
+    --blue-a10: #0098d4e8;
+    --blue-a11: #007cb0;
+    --blue-a12: #003b5a;
+  
+    --blue-contrast: #fff;
+    --blue-surface: #eff9ffcc;
+    --blue-indicator: #2dade4;
+    --blue-track: #2dade4;
+  }
+  
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      :root, .light, .light-theme {
+        --blue-1: oklch(99.3% 0.004 232.4);
+        --blue-2: oklch(98.1% 0.011 232.4);
+        --blue-3: oklch(96% 0.024 232.4);
+        --blue-4: oklch(93.7% 0.042 232.4);
+        --blue-5: oklch(90.5% 0.059 232.4);
+        --blue-6: oklch(86.3% 0.076 232.4);
+        --blue-7: oklch(80.8% 0.097 232.4);
+        --blue-8: oklch(73.3% 0.132 232.4);
+        --blue-9: oklch(70.5% 0.132 232.4);
+        --blue-10: oklch(66.8% 0.132 232.4);
+        --blue-11: oklch(54.9% 0.132 232.4);
+        --blue-12: oklch(33.1% 0.099 232.4);
+  
+        --blue-a1: color(display-p3 0.024 0.514 1 / 0.016);
+        --blue-a2: color(display-p3 0.024 0.592 0.922 / 0.048);
+        --blue-a3: color(display-p3 0.012 0.565 0.961 / 0.099);
+        --blue-a4: color(display-p3 0.004 0.624 0.953 / 0.165);
+        --blue-a5: color(display-p3 0.004 0.592 0.953 / 0.24);
+        --blue-a6: color(display-p3 0.004 0.545 0.929 / 0.326);
+        --blue-a7: color(display-p3 0.004 0.529 0.875 / 0.44);
+        --blue-a8: color(display-p3 0 0.529 0.863 / 0.624);
+        --blue-a9: color(display-p3 0 0.502 0.812 / 0.659);
+        --blue-a10: color(display-p3 0 0.467 0.757 / 0.706);
+        --blue-a11: color(display-p3 0 0.341 0.588 / 0.793);
+        --blue-a12: color(display-p3 0 0.153 0.278 / 0.914);
+  
+        --blue-contrast: #fff;
+        --blue-surface: color(display-p3 0.941 0.976 1 / 0.8);
+        --blue-indicator: oklch(70.5% 0.132 232.4);
+        --blue-track: oklch(70.5% 0.132 232.4);
+      }
+    }
+  }
+
+
+
+}
